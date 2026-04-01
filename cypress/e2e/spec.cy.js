@@ -1,5 +1,5 @@
 
-// First step I defined a test case. I will test cnarios.com website.
+
 
 
 describe('Testes de Regressão - Site Cnarios', () => {
@@ -25,6 +25,20 @@ describe('Testes de Regressão - Site Cnarios', () => {
 
   it('Retorna a home ou rola de volta', () => {
     cy.visit('https://www.cnarios.com/')
+    cy.wait(2000)
   })
   
+  it('Acessa o botão Start Exploring e deposi retorna', () => {
+  cy.get('button.MuiButton-containedPrimary').click()
+  cy.wait(2000)
+  cy.get('.py-8 > a > .MuiButtonBase-root').click()
+  })
+
+  
+
+
+
+
+
+
 });
