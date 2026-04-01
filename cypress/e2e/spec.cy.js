@@ -20,6 +20,9 @@ describe('Testes de Regressão - Site Cnarios', () => {
   it('Deve verificar se o botão contato existe', () => {
     // Rola a página até o formulário ou clica no link "Contato"
     cy.contains('Contact Us').click()
+    cy.contains('Features').click()
+
+    // cy.get('.css-1m1nqz6 > [href="/#features"]').click()
     cy.wait(3000)
   })
 
@@ -28,17 +31,9 @@ describe('Testes de Regressão - Site Cnarios', () => {
     cy.wait(2000)
   })
   
-  it('Acessa o botão Start Exploring e deposi retorna', () => {
-  cy.get('button.MuiButton-containedPrimary').click()
-  cy.wait(2000)
-  cy.get('.py-8 > a > .MuiButtonBase-root').click()
-  })
-
-  
-
-
-
-
-
-
-});
+    it('Acessa o botão Start Exploring e deposi retorna a home', () => {
+    cy.get('button.MuiButton-containedPrimary').click()
+    cy.wait(2000)
+    cy.get('.py-8 > a > .MuiButtonBase-root').click()
+    })
+    })
